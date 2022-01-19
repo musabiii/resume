@@ -1,0 +1,247 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #eee;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #7c99ac;
+}
+
+:root {
+  --color1: #d3dedc;
+  --color2: #92a9bd;
+  --color3: #7c99ac;
+  --color4: #ffefef;
+}
+
+html {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  -webkit-box-shadow: 2rem 2rem 40rem #696969;
+          box-shadow: 2rem 2rem 40rem #696969;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  overflow-y: scroll;
+  font-size: 1.6rem;
+  color: #696969;
+}
+
+.container .sidebar {
+  background-color: var(--color1);
+  width: 40%;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  text-align: center;
+}
+
+.container .sidebar .img {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.container .sidebar .img img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.container .sidebar h2 {
+  margin: 0;
+}
+
+.container .sidebar h2 span {
+  color: var(--color3);
+}
+
+.container .sidebar .line {
+  height: 0.1rem;
+  width: 80%;
+  background-color: black;
+  margin: 2rem auto;
+  opacity: 0.2;
+}
+
+.container .sidebar .contacts p {
+  margin-left: 20%;
+  text-align: left;
+}
+
+.container .sidebar i {
+  margin: 0 1rem;
+}
+
+.container .sidebar .skills {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container .content {
+  width: 100%;
+}
+
+.container .content .header {
+  height: 5rem;
+  background-color: #65ceff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.container .content .header div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.container .content .header .tab-resume {
+  background-color: var(--color3);
+}
+
+.container .content .header .tab-portfolio {
+  background-color: var(--color3);
+}
+
+.container .content .header .tab-resume:hover,
+.container .content .header .tab-portfolio:hover {
+  color: #fff;
+  font-weight: 700;
+}
+
+.container .content .header .active-tab {
+  background-color: var(--color2);
+  font-weight: 700;
+}
+
+.container .content .box {
+  background-color: var(--color4);
+  width: 100%;
+  display: none;
+}
+
+.container .content .box.active {
+  display: block;
+}
+
+.container .content .portfolio {
+  padding: 2rem;
+}
+
+.container .content .portfolio .project {
+  margin-bottom: 5rem;
+}
+
+.container .content .portfolio h1 {
+  color: var(--color3);
+  text-transform: capitalize;
+}
+
+.container .content .portfolio .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 60rem;
+  margin: 1rem auto;
+  gap: .8rem;
+}
+
+.container .content .portfolio .img-box .img-desktop {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.container .content .portfolio .img-box .img-mobile {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+}
+
+.container .content .portfolio .img-box img {
+  max-height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+/*
+==================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+*/
+@media (max-width: 700px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 70%;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .sidebar {
+    position: initial;
+    width: 100%;
+  }
+  .container .content .header {
+    top: 0;
+  }
+  .container .content .portfolio .img-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .content .portfolio .img-box .img-desktop {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 10rem;
+            flex: 1 1 10rem;
+  }
+  .container .content .portfolio .img-box .img-mobile {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 10rem;
+            flex: 1 1 10rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

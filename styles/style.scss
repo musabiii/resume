@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
+
+* {
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #eee;
+}
+
+//prevent change color of ref elements
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #7c99ac;
+}
+
+//color pallets from colorhunt.com
+:root {
+  --color1: #d3dedc;
+  --color2: #92a9bd;
+  --color3: #7c99ac;
+  --color4: #ffefef;
+}
+
+html {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  box-shadow: 2rem 2rem 40rem #696969;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow-y: scroll;
+  font-size: 1.6rem;
+  color: #696969;
+
+  .sidebar {
+  // max-width: 1000px;
+    background-color: var(--color1);
+    width: 40%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    text-align: center;
+
+    .img {
+      width: 90%;
+      margin: 20px auto;
+      img {
+        width: 100%;
+        border-radius: 0.5rem;
+      }
+    }
+    h2 {
+      margin: 0;
+      span {
+        color: var(--color3);
+      }
+    }
+
+    .line {
+      height: 0.1rem;
+      width: 80%;
+      background-color: black;
+      margin: 2rem auto;
+      opacity: 0.2;
+    }
+
+    .contacts {
+      p {
+        margin-left: 20%;
+        text-align: left;
+      }
+    }
+
+    i {
+      margin: 0 1rem;
+    }
+
+    .skills {
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+  .content {
+    width: 100%;
+    .header {
+      height: 5rem;
+      background-color: rgb(101, 206, 255);
+      display: flex;
+      width: 100%;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+
+      div {
+        flex: 1 1 50%;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+
+      .tab-resume {
+        background-color: var(--color3);
+      }
+
+      .tab-portfolio {
+        background-color: var(--color3);
+      }
+
+      .tab-resume:hover,
+      .tab-portfolio:hover {
+        color: #fff;
+        font-weight: 700;
+      }
+      .active-tab {
+        background-color: var(--color2);
+        font-weight: 700;
+      }
+    }
+
+    .box {
+      background-color: var(--color4);
+      width: 100%;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+
+    .portfolio {
+      padding: 2rem;
+
+      .project {
+        margin-bottom: 5rem;
+      }
+
+      h1 {
+        color: var(--color3);
+        text-transform: capitalize;
+      }
+
+      .img-box {
+        display: flex;
+        max-width: 60rem;
+        margin: 1rem auto;
+        gap: .8rem;
+        .img-desktop {
+          flex: 1 1 41rem;
+        }
+
+        .img-mobile {
+          flex: 1 1 10rem;
+        }
+        img {
+          max-height: 300px;
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/*
+==================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+*/
+
+@media (max-width:700px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+
+@media (max-width:480px) {
+  html {
+    font-size: 70%;
+  }
+
+  .container {
+    flex-direction: column;
+    .sidebar {
+      position: initial;
+      width: 100%;
+    }
+
+    .content {
+      .header {
+        // position: absolute;
+        top: 0;
+      }
+
+      .portfolio {
+
+        .img-box {
+          flex-direction: column;
+          .img-desktop {
+            flex: 1 1 10rem;
+          }
+          
+          .img-mobile {
+            flex: 1 1 10rem;
+          }
+        }
+      }
+    }
+  }
+}
