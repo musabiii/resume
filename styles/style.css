@@ -156,6 +156,11 @@ html {
   padding: 2rem;
 }
 
+.container .content .portfolio a {
+  font-weight: 700;
+  color: var(--color3);
+}
+
 .container .content .portfolio .project {
   margin-bottom: 5rem;
 }

@@ -141,6 +141,10 @@ html {
     }
 
     .portfolio {
+      a {
+        font-weight: 700;
+        color: var(--color3);
+      }
       padding: 2rem;
 
       .project {
