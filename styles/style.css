@@ -31,6 +31,17 @@ a:hover {
 html {
   font-family: "Titillium Web", sans-serif;
   font-size: 62.5%;
+  font-weight: 600;
+}
+
+*::-moz-selection {
+  background-color: var(--color2);
+  color: #fff;
+}
+
+*::selection {
+  background-color: var(--color2);
+  color: #fff;
 }
 
 .container {
@@ -58,7 +69,7 @@ html {
 }
 
 .container .sidebar .img {
-  width: 90%;
+  width: 85%;
   margin: 20px auto;
 }
 
@@ -112,6 +123,7 @@ html {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  font-size: 2.5rem;
 }
 
 .container .content .header div {
@@ -121,6 +133,7 @@ html {
   text-align: center;
   line-height: 50px;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .container .content .header .tab-resume {
@@ -139,20 +152,95 @@ html {
 
 .container .content .header .active-tab {
   background-color: var(--color2);
-  font-weight: 700;
+  position: relative;
+}
+
+.container .content .header .active-tab::after {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 0.3rem;
+  background-color: #eee;
+  top: 4rem;
+  left: 5%;
 }
 
 .container .content .box {
-  background-color: var(--color4);
   width: 100%;
   display: none;
+}
+
+.container .content .box .box-header {
+  display: none;
+  text-align: center;
 }
 
 .container .content .box.active {
   display: block;
 }
 
+.container .content .resume {
+  padding: 2rem;
+}
+
+.container .content .resume h2 {
+  padding-top: 2rem;
+}
+
+.container .content .resume .about {
+  font-size: 1.7rem;
+  padding: 1rem 0;
+}
+
+.container .content .resume p.line {
+  height: 0.1rem;
+  width: 90%;
+  background-color: black;
+  margin-bottom: 2rem;
+  opacity: 0.2;
+}
+
+.container .content .resume .experience h4 {
+  margin-top: 2rem;
+}
+
+.container .content .resume .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .content .resume .box-container .box-left {
+  padding: 1rem;
+}
+
+.container .content .resume .box-container .box-right {
+  padding: 1rem;
+}
+
+.container .content .resume table td {
+  padding-right: 1rem;
+}
+
+.container .content .resume .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+}
+
+.container .content .resume .efcet {
+  width: 80%;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.container .content .resume .efcet img {
+  width: 100%;
+}
+
 .container .content .portfolio {
+  padding: 2rem;
   padding: 2rem;
 }
 
@@ -163,6 +251,10 @@ html {
 
 .container .content .portfolio .project {
   margin-bottom: 5rem;
+}
+
+.container .content .portfolio .project a {
+  margin-right: 2rem;
 }
 
 .container .content .portfolio h1 {
@@ -176,7 +268,7 @@ html {
   display: flex;
   max-width: 60rem;
   margin: 1rem auto;
-  gap: .8rem;
+  gap: 0.8rem;
 }
 
 .container .content .portfolio .img-box .img-desktop {
@@ -231,6 +323,21 @@ html {
   }
   .container .content .header {
     top: 0;
+    display: none;
+  }
+  .container .content .box .box-header {
+    display: block;
+    background-color: var(--color3);
+    color: #696969;
+  }
+  .container .content .resume {
+    display: initial;
+  }
+  .container .content .resume .skills {
+    gap: 1rem;
+  }
+  .container .content .portfolio {
+    display: initial;
   }
   .container .content .portfolio .img-box {
     -webkit-box-orient: vertical;
