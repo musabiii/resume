@@ -163,6 +163,13 @@ html {
       &.active {
         display: block;
       }
+      p.line {
+        height: 0.1rem;
+        width: 90%;
+        background-color: black;
+        margin-bottom: 2rem;
+        opacity: 0.2;
+      }
     }
 
     .resume {
@@ -176,13 +183,7 @@ html {
         padding: 1rem 0;
       }
 
-      p.line {
-        height: 0.1rem;
-        width: 90%;
-        background-color: black;
-        margin-bottom: 2rem;
-        opacity: 0.2;
-      }
+
 
       .experience {
         h4 {

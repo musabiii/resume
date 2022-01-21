@@ -179,6 +179,14 @@ html {
   display: block;
 }
 
+.container .content .box p.line {
+  height: 0.1rem;
+  width: 90%;
+  background-color: black;
+  margin-bottom: 2rem;
+  opacity: 0.2;
+}
+
 .container .content .resume {
   padding: 2rem;
 }
@@ -190,14 +198,6 @@ html {
 .container .content .resume .about {
   font-size: 1.7rem;
   padding: 1rem 0;
-}
-
-.container .content .resume p.line {
-  height: 0.1rem;
-  width: 90%;
-  background-color: black;
-  margin-bottom: 2rem;
-  opacity: 0.2;
 }
 
 .container .content .resume .experience h4 {
